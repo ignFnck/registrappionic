@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="centrar-boton-ionic">
+      <ion-button class="back" routerLink="/login" expand="block" fill="clear" shape="round">
+        <ion-icon name="arrow-back-circle-sharp"></ion-icon>
+        VOLVER
+      </ion-button>
+    </div>
+    <ion-card class="titulo">
+      <h1>Ver asistencia</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/3589/3589030.png" alt="" width="200" height="200">
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Abrir camara
+      </ion-button>
+      <hr size="2px" color="purple" />
+      <h1>Ingresar a</h1>
+      <img src="https://assets.website-files.com/5e318ddf83dd66053d55c38a/5e318ddf83dd66ddea55c504_blackboard.png" alt="">
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Entrar
+      </ion-button>
+      <hr size="2px" color="purple" />
+      <h1>Asignaturas</h1>
+      <img src="https://ict.pucv.cl/wp-content/uploads/2021/10/icon-cursos.png" alt="" width="230" height="200">
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Entrar
+      </ion-button>
+
+    </ion-card>
+  </div>
+
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="fondo">
+
+
+    <ion-card class="titulo">
+      <div class="centrar-boton-ionic">
+        <ion-button class="back" routerLink="/login" expand="block" fill="clear" shape="round">
+          <ion-icon name="arrow-back-circle-sharp"></ion-icon>
+          VOLVER
+        </ion-button>
+      </div>
+      <img class="imagen_duoc"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1024px-Logo_DuocUC.svg.png"
+        alt="Logo_DuocUC">
+
+      <form [formGroup]="alumno" (ngSubmit)="registrar()">
+        <ion-item>
+          <ion-label position="stacked">Rut</ion-label>
+          <ion-input type="text" placeholder="Ingrese rut" formControlName="rut"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Nombre completo</ion-label>
+          <ion-input type="text" placeholder="Ingrese nombre" formControlName="nom_completo"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Fecha nacimiento</ion-label>
+          <ion-datetime type="date" presentation="date" [max]="birthday" placeholder="Ingrese fecha nacimiento"
+            formControlName="fecha_nac"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Semestre</ion-label>
+          <ion-input type="number" placeholder="Ingrese semestre" formControlName="semestre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">correo</ion-label>
+          <ion-input type="text" placeholder="Ingrese email" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input type="password" placeholder="Ingrese contraseña" formControlName="password"
+            (keydown.space)="$event.preventDefault(1);" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Repita Contraseña</ion-label>
+          <ion-input type="password" placeholder="Ingrese nuevamente contraseña" [(ngModel)]="verificar_password"
+            [ngModelOptions]="{standalone: 'true'}" (keydown.space)="$event.preventDefault();" required></ion-input>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!alumno.valid">REGISTRAR</ion-button>
+
+      </form>
+    </ion-card>
+
+  </div>
+</ion-content>

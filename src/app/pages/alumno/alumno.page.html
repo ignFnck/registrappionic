@@ -1,0 +1,33 @@
+
+<ion-content [fullscreen]="true">
+  <div class="fondo">
+    <div class="centrar-boton-ionic">
+      <ion-button class="back" routerLink="/login" expand="block" fill="clear" shape="round">
+        <ion-icon name="arrow-back-circle-sharp"></ion-icon>
+        VOLVER
+      </ion-button>
+    </div>
+    <ion-card class="titulo">
+      <h1>Asistencia QR</h1>
+      <img src="https://play-lh.googleusercontent.com/8Oj0ElUhIxeqx88lY9w7VUpYXIXMI-gwFyv-X3Xf7gwENQTTyvKPVd8e8QBmFNViUg=w240-h480-rw" alt="">  
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Abrir camara
+      </ion-button>
+      <hr size="2px" color="purple" />
+      <h1>Ingresar a</h1>
+      <img src="https://assets.website-files.com/5e318ddf83dd66053d55c38a/5e318ddf83dd66ddea55c504_blackboard.png" alt="">
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Entrar
+      </ion-button>
+      <hr size="2px" color="purple" />
+      <h1>Ver mi asistencia</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/3589/3589030.png" alt="" width="200" height="200">
+      <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+        Entrar
+      </ion-button>
+
+    </ion-card>
+  </div>
+
+</ion-content>
+

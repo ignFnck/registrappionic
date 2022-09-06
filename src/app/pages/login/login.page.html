@@ -1,0 +1,33 @@
+
+
+<ion-content>
+  <div class="fondo">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1024px-Logo_DuocUC.svg.png" alt="Logo_DuocUC">
+  <ion-card-header>
+
+    <ion-card-title>REGISTRO</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <!-- usuario -->
+    <ion-item fill="solid"> 
+    <ion-label>Usuario</ion-label>
+    <ion-input type="text" placeholder="Ingrese Usuario" [(ngModel)]="user"></ion-input>    
+    </ion-item>
+    <!-- contrasenia -->
+    <ion-item fill="solid"> 
+      <ion-label >Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese Contraseña" [(ngModel)]="password"></ion-input>    
+      </ion-item>
+     <!-- boton -->    
+      <ion-button (click)="login()" expand="undefined"  color="light" shape="round">
+        INGRESAR
+      </ion-button>
+      <ion-button routerLink='/registrar' expand="undefined"  color="light"shape="round">
+        Ir a registrarse
+      </ion-button>
+      <ion-button routerLink='/recuperar-correo' expand="undefined" color="light" shape="round">
+        ¿Olvidaste tu contraseña?
+      </ion-button>
+  </ion-card-content>
+</div>
+</ion-content>
